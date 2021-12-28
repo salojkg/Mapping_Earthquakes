@@ -1,7 +1,7 @@
 // Add console.log to check to see if our code is working.
 console.log("unda");
 // Create the map object with center and zoom level.
-// let map = L.map('mapid').setView([30, 30], 2);
+//let map = L.map('mapid').setView([44.0, -80.0], 2);
 
 
 
@@ -29,7 +29,7 @@ let baseMaps = {
 
 // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
-  center: [30, 30],
+  center: [44.0, -80.0],
   zoom: 2,
   layers: [streets]
 })
@@ -39,7 +39,7 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
 
 // Accessing the airport GeoJSON URL
-let airportData = "https://raw.githubusercontent.com/salojkg/Mapping_Earthquakes/main/majorAirports.json";
+let airportData = "https://raw.githubusercontent.com/salojkg/Mapping_Earthquakes/main/torontoRoutes.json";
 
 // Grabbing our GeoJSON data.
 d3.json(airportData).then(function(data) {
